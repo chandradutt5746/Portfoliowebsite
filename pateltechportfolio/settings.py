@@ -24,10 +24,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY',
                        'x%-v0d^!5nmcm=dw^=%8_^#%va1lkkt!s2@0mey$s1fs&#bxnr')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv(
-    'DJANGO_ALLOWED_HOSTS', 'portfoliowebsite-production-58f3.up.railway.app,localhost').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS',
+                          'localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'pateltechportfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
