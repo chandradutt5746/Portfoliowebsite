@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY',
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv(
-    'DJANGO_ALLOWED_HOSTS', 'portfoliowebsite.railway.internal,localhost').split(',')
+    'DJANGO_ALLOWED_HOSTS', 'portfoliowebsite-production-58f3.up.railway.app,localhost').split(',')
 
 
 # Application definition
