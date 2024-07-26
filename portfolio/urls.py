@@ -7,7 +7,7 @@ router.register(r'projects', ProjectViewSet)
 router.register(r'contact-messages', ContactMessageViewSet)
 
 urlpatterns = [
-    path('', index),
+    # path('', index),
     path('api/', include(router.urls)),
     path('api/projects/<int:pk>/', ProjectDetailView.as_view(), name='project-detail'),
 ]
